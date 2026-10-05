@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Produtos - Café & Sorveteria</title>
+
+  <link rel="stylesheet" href="/Cafeteria-WEB/css/style.css">
+</head>
+
+<body>
+  <!-- HEADER/NAVEGAÇÃO -->
+  <header class="header">
+    <nav class="navbar">
+      <div class="logo">☕ Gelato & Grão</div>
+      <ul class="nav-menu">
+        <li><a href="/Cafeteria-WEB/index.html">Home</a></li>
+        <li><a href="/Cafeteria-WEB/template/produtos.html" class="active">Produtos</a></li>
+        <li><a href="/Cafeteria-WEB/template/pedidos.html">Pedidos</a></li>
+      </ul>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+
+  <!-- PÁGINA DE PRODUTOS -->
+  <section class="produtos-page">
+    <div class="container">
+      <h1>Nossos Produtos</h1>
+
+      <!-- FILTROS -->
+      <div class="filtros">
+        <button class="filtro-btn active" data-filtro="todos">Todos</button>
+        <button class="filtro-btn" data-filtro="bebidas quentes">Bebidas quentes</button>
+        <button class="filtro-btn" data-filtro="sobremesas">Sobremesas</button>
+        <button class="filtro-btn" data-filtro="bebidas geladas">Bebidas geladas</button>
+        <button class="filtro-btn" data-filtro="padaria">Padaria e Confeitaria</button>
+        <button class="filtro-btn" data-filtro="lanches">Lanches salgados</button>
+        <button class="filtro-btn" data-filtro="saudaveis">Opções saudáveis</button>
+        <button class="filtro-btn" data-filtro="venda">Produtos para venda</button>
+      </div>
+
+      <!-- GRID DE PRODUTOS -->
+      <div class="produtos-grid">
+        <!-- BEBIDAS QUENTES -->
+        <div class="produto-card" data-categoria="bebidas quentes">
+          <img src="/Cafeteria-WEB/img/cafe-expresso.jpg" alt="Café Expresso">
+          <h3>Café Expresso</h3>
+          <p>Intenso e aromático</p>
+          <div class="produto-footer">
+            <span class="preco">R$ 78,00</span>
+            <a href="pedidos.html?produto=cafe-expresso" class="btn-pequeno">Pedir</a>
+          </div>
+        </div>
+
+        <div class="produto-card" data-categoria="bebidas quentes">
+          <img src="/Cafeteria-WEB/img/cafe-com-leite.jpg" alt="Café com Leite">
+          <h3>Café com Leite</h3>
+          <p>Cremoso e reconfortante</p>
+          <div class="produto-footer">
+            <span class="preco">R$ 30,00</span>
+            <a href="pedidos.html?produto=cafe-com-leite" class="btn-pequeno">Pedir</a>
+          </div>
+        </div>
+
+        <div class="produto-card" data-categoria="bebidas quentes">
+          <img src="/Cafeteria-WEB/img/cappuccino.jpg" alt="Cappuccino">
+          <h3>Cappuccino</h3>
+          <p>Com espuma de leite</p>
+          <div class="produto-footer">
+            <span class="preco">R$ 40,00</span>
+            <a href="pedidos.html?produto=cappuccino" class="btn-pequeno">Pedir</a>
+          </div>
+        </div>
+
+        <!-- SOBREMESAS -->
+        <div class="produto-card" data-categoria="sobremesas">
+          <img src="/Cafeteria-WEB/img/petit-gateau.jpg" alt="Petit gauteau">
+          <h3>Petit Gâteau</h3>
+          <p>Sabor clássico</p>
+          <div class="produto-footer">
+            <span class="preco">R$ 40,00</span>
+            <a href="pedidos.html?produto=petit-gateau" class="btn-pequeno">Pedir</a>
+          </div>
+        </div>
+
+        <div class="produto-card" data-categoria="sobremesas">
+          <img src="/Cafeteria-WEB/img/pavê.jpg" alt="pavê">
+          <h3>Pavê</h3>
+          <p>Chocolate belga</p>
+          <div class="produto-footer">
+            <span class="preco">R$ 40,00</span>
+            <a href="pedidos.html?produto=pavê" class="btn-pequeno">Pedir</a>
+          </div>
+        </div>
+
+        <div class="produto-card" data-categoria="sobremesas">
+          <img src="/Cafeteria-WEB/img/palha-italiana.jpg" alt="palha italiana">
+          <h3>palha italiana</h3>
+          <p>feito com chocolates suiços</p>
+          <div class="produto-footer">
+            <span class="preco">R$ 45,00</span>
+            <a href="pedidos.html?produto=palha-italiana" class="btn-pequeno">Pedir</a>
+          </div>
+        </div>
+
+        <!-- BEBIDAS GELADAS -->
+        <div class="produto-card" data-categoria="bebidas geladas">
+          <img src="/Cafeteria-WEB/img/suco-natural.jpg" alt="Suco Natural">
+          <h3>Suco Natural</h3>
+          <p>Seleção do dia</p>
+          <div class="produto-footer">
+            <span class="preco">R$ 50,00</span>
+            <a href="pedidos.html?produto=suco-natural" class="btn-pequeno">Pedir</a>
+          </div>
+        </div>
+
+        <div class="produto-card" data-categoria="bebidas geladas">
+          <img src="/Cafeteria-WEB/img/milkshake.jpg" alt="Milkshake">
+          <h3>Milkshake</h3>
+          <p>Sabor irresistível</p>
+          <div class="produto-footer">
+            <span class="preco">R$ 60,00</span>
+            <a href="pedidos.html?produto=milkshake" class="btn-pequeno">Pedir</a>
+          </div>
+        </div>
+
+        <div class="produto-card" data-categoria="bebidas geladas">
+          <img src="/Cafeteria-WEB/img/cha-gelado.jpg" alt="Chá Gelado">
+          <h3>Chá Gelado</h3>
+          <p>Gelado e refrescante</p>
+          <div class="produto-footer">
+            <span class="preco">R$ 30,00</span>
+            <a href="pedidos.html?produto=cha-gelado" class="btn-pequeno">Pedir</a>
+          </div>
+        </div>
+
+        <!-- PADARIA E CONFEITARIA -->
+        <div class="produto-card" data-categoria="padaria">
+          <img src="/Cafeteria-WEB/img/bolo-chocolate.jpg" alt="Bolo de Chocolate">
+          <h3>Bolo de Chocolate</h3>
+          <p>Fatia deliciosa</p>
+          <div class="produto-footer">
+            <span class="preco">R$ 30,00</span>
+            <a href="pedidos.html?produto=bolo-chocolate" class="btn-pequeno">Pedir</a>
+          </div>
+        </div>
+
+        <div class="produto-card" data-categoria="padaria">
+          <img src="/Cafeteria-WEB/img/croissant.jpg" alt="Croissant">
+          <h3>Croissant</h3>
+          <p>Folhado crocante</p>
+          <div class="produto-footer">
+            <span class="preco">R$ 55,00</span>
+            <a href="pedidos.html?produto=croissant" class="btn-pequeno">Pedir</a>
+          </div>
+        </div>
+
+        <div class="produto-card" data-categoria="padaria">
+          <img src="/Cafeteria-WEB/img/donuts.jpg" alt="Donuts">
+          <h3>Donuts</h3>
+          <p>Recheados maravilhosos</p>
+          <div class="produto-footer">
+            <span class="preco">R$ 25,00</span>
+            <a href="pedidos.html?produto=donuts" class="btn-pequeno">Pedir</a>
+          </div>
+        </div>
+
+          <!-- LANCHES SALGADOS -->
+          <div class="produto-card" data-categoria="lanches">
+            <img src="/Cafeteria-WEB/img/wraps.jpg" alt="wraps">
+            <h3>Wraps</h3>
+            <p>magnífico</p>
+            <div class="produto-footer">
+              <span class="preco">R$ 40,00</span>
+              <a href="pedidos.html?produto=wraps" class="btn-pequeno">Pedir</a>
+            </div>
+          </div>
+
+          <div class="produto-card" data-categoria="lanches">
+            <img src="/Cafeteria-WEB/img/quiches.jpg" alt="quiches">
+            <h3>Quiches</h3>
+            <p>explosão de sabores</p>
+            <div class="produto-footer">
+              <span class="preco">R$ 45,00</span>
+              <a href="pedidos.html?produto=quiches" class="btn-pequeno">Pedir</a>
+            </div>
+          </div>
+
+          <div class="produto-card" data-categoria="lanches">
+            <img src="/Cafeteria-WEB/img/empada.jpg" alt="empada">
+            <h3>Empada</h3>
+            <p>crocante</p>
+            <div class="produto-footer">
+              <span class="preco">R$ 30,00</span>
+              <a href="pedidos.html?produto=empada" class="btn-pequeno">Pedir</a>
+            </div>
+          </div>
+
+          <!-- OPÇÕES SAUDÁVEIS -->
+          <div class="produto-card" data-categoria="saudaveis">
+            <img src="/Cafeteria-WEB/img/tapioca.jpg" alt="tapioca">
+            <h3>Tapioca</h3>
+            <p>recheios perfeitos</p>
+            <div class="produto-footer">
+              <span class="preco">R$ 50,00</span>
+              <a href="pedidos.html?produto=tapioca" class="btn-pequeno">Pedir</a>
+            </div>
+          </div>
+
+          <div class="produto-card" data-categoria="saudaveis">
+            <img src="/Cafeteria-WEB/img/iorgute.jpg" alt="iorgute">
+            <h3>Iorgute com granolas</h3>
+            <p>sabor leve</p>
+            <div class="produto-footer">
+              <span class="preco">R$ 40,00</span>
+              <a href="pedidos.html?produto=iorgute" class="btn-pequeno">Pedir</a>
+            </div>
+          </div>
+
+          <div class="produto-card" data-categoria="saudaveis">
+            <img src="/Cafeteria-WEB/img/sanduiches.jpg" alt="sanduiches">
+            <h3>Sanduíches naturais</h3>
+            <p>integrais</p>
+            <div class="produto-footer">
+              <span class="preco">R$ 30,00</span>
+              <a href="pedidos.html?produto=sanduiches" class="btn-pequeno">Pedir</a>
+            </div>
+          </div>
+
+          <!-- PRODUTOS PARA VENDA -->
+          <div class="produto-card" data-categoria="venda">
+            <img src="/Cafeteria-WEB/img/geleias.jpg" alt="geleias">
+            <h3>Geleias artesanais</h3>
+            <p>frutas frescas</p>
+            <div class="produto-footer">
+              <span class="preco">R$ 25,00</span>
+              <a href="pedidos.html?produto=geleia" class="btn-pequeno">Pedir</a>
+            </div>
+          </div>
+          
+          <div class="produto-card" data-categoria="venda">
+            <img src="/Cafeteria-WEB/img/mel.jpg" alt="mel">
+            <h3>Mel</h3>
+            <p>sabor perfeito</p>
+            <div class="produto-footer">
+              <span class="preco">R$ 55,00</span>
+              <a href="pedidos.html?produto=mel" class="btn-pequeno">Pedir</a>
+            </div>
+          </div> 
+
+          <div class="produto-card" data-categoria="venda">
+            <img src="/Cafeteria-WEB/img/chocolate.jpg" alt="chocolate">
+            <h3>Chocolate artesanal</h3>
+            <p>perfeito para você</p>
+            <div class="produto-footer">
+              <span class="preco">R$ 70,00</span>
+              <a href="pedidos.html?produto=chocolate" class="btn-pequeno">Pedir</a>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Gelato & Grão. Todos os direitos reservados.</p>
+      <div class="social-links">
+        <a href="#">Instagram</a>
+        <a href="#">WhatsApp</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/Cafeteria-WEB/js/script.js"></script>
+</body>
+
+</html>

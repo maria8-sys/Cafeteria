@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fazer Pedido - Café & Sorveteria</title>
+    <link rel="stylesheet" href="/Cafeteria-WEB/css/style.css">
+</head>
+<body>
+    <!-- HEADER/NAVEGAÇÃO -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">☕ Gelato & Grão</div>
+            <ul class="nav-menu">
+                <li><a href="/Cafeteria-WEB/index.html">Home</a></li>
+                <li><a href="/Cafeteria-WEB/template/produtos.html">Produtos</a></li>
+                <li><a href="/Cafeteria-WEB/template/pedidos.html" class="active">Pedidos</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- PÁGINA DE PEDIDOS -->
+    <section class="pedidos-page">
+        <div class="container">
+            <h1>Faça seu Pedido</h1>
+            
+            <div class="pedidos-content">
+                <!-- FORMULÁRIO DE PEDIDO -->
+                <div class="pedido-form-container">
+                    <h2>Detalhes do Pedido</h2>
+                    <form class="pedido-form" id="formPedido">
+                        <!-- INFORMAÇÕES PESSOAIS -->
+                        <fieldset>
+                            <legend>Dados Pessoais</legend>
+                            <div class="form-group">
+                                <label for="nome">Nome Completo *</label>
+                                <input type="text" id="nome" name="nome" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="telefone">Telefone/WhatsApp *</label>
+                                <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999" required>
+                            </div>
+                        </fieldset>
+
+                        <!-- TIPO DE ENTREGA -->
+                        <fieldset>
+                            <legend>Tipo de Entrega</legend>
+                            <div class="form-group">
+                                <label>
+                                    <input type="radio" name="entrega" value="retirada" checked>
+                                    🏪 Retirada na Loja
+                                </label>
+                                <label>
+                                    <input type="radio" name="entrega" value="delivery">
+                                    🚗 Delivery
+                                </label>
+                                <label>
+                                    <input type="radio" name="entrega" value="presencial">
+                                    🪑 Consumir no Local
+                                </label>
+                            </div>
+                        </fieldset>
+
+                        <!-- ENDEREÇO (Mostrado apenas para Delivery) -->
+                        <fieldset id="endereco-fieldset" style="display: none;">
+                            <legend>Endereço de Entrega</legend>
+                            <div class="form-group">
+                                <label for="rua">Rua *</label>
+                                <input type="text" id="rua" name="rua">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="numero">Número *</label>
+                                    <input type="text" id="numero" name="numero">
+                                </div>
+                                <div class="form-group">
+                                    <label for="complemento">Complemento</label>
+                                    <input type="text" id="complemento" name="complemento">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="bairro">Bairro *</label>
+                                <input type="text" id="bairro" name="bairro">
+                            </div>
+                        </fieldset>
+
+                        <!-- PRODUTOS -->
+                        <fieldset>
+                            <legend>Selecione seus Produtos</legend>
+                            <div class="produtos-pedido">
+                                <div class="produto-pedido">
+                                    <label>
+                                        <input type="checkbox" name="produto" value="cafe-expresso" data-preco="78.00">
+                                        Café Expresso - R$ 78,00
+                                    </label>
+                                    <input type="number" min="0" max="10" value="0" class="quantidade">
+                                </div>                                
+                                <div class="produto-pedido">
+                                    <label>
+                                        <input type="checkbox" name="produto" value="cappuccino" data-preco="30.00">
+                                        Café com leite - R$ 30,00
+                                    </label>
+                                    <input type="number" min="0" max="10" value="0" class="quantidade">
+                                </div>
+                                <div class="produto-pedido">
+                                    <label>
+                                        <input type="checkbox" name="produto" value="cappuccino" data-preco="40.00">
+                                        Cappuccino - R$ 40,00
+                                    </label>
+                                    <input type="number" min="0" max="10" value="0" class="quantidade">
+                                </div>                             
+                                <div class="produto-pedido">
+                                    <label>
+                                        <input type="checkbox" name="produto" value="petit-gateau" data-preco="40.00">
+                                        Petit Gâteau - R$ 40,00
+                                    </label>
+                                    <input type="number" min="0" max="10" value="0" class="quantidade">
+                                </div>
+                                <div class="produto-pedido">
+                                    <label>
+                                        <input type="checkbox" name="produto" value="Pavê" data-preco="40.00">
+                                        Pavê - R$ 40,00
+                                    </label>
+                                    <input type="number" min="0" max="10" value="0" class="quantidade">
+                                </div>
+                                <div class="produto-pedido">
+                                    <label>
+                                        <input type="checkbox" name="produto" value="palha-italiana" data-preco="45.00">
+                                        Palha italiana - R$ 45,00
+                                    </label>
+                                    <input type="number" min="0" max="10" value="0" class="quantidade">
+                                </div>                       
+                                <div class="produto-pedido">
+                                    <label>
+                                        <input type="checkbox" name="produto" value="cappuccino" data-preco="50.00">
+                                        Suco Natural - R$ 50,00
+                                    </label>
+                                    <input type="number" min="0" max="10" value="0" class="quantidade">
+                                </div>
+                                <div class="produto-pedido">
+                                    <label>
+                                        <input type="checkbox" name="produto" value="milkshake" data-preco="60.00">
+                                        Milkshake - R$ 60,00
+                                    </label>
+                                    <input type="number" min="0" max="10" value="0" class="quantidade">
+                                </div>                              
+                                <div class="produto-pedido">
+                                    <label>
+                                        <input type="checkbox" name="produto" value="cha-gelado" data-preco="30.00">
+                                        Chá Gelado - R$ 30,00
+                                    </label>
+                                    <input type="number" min="0" max="10" value="0" class="quantidade">
+                                </div>                    
+                                <div class="produto-pedido">
+                                    <label>
+                                        <input type="checkbox" name="produto" value="bolo de chocolate" data-preco="30.00">
+                                        Bolo de chocolate - R$ 30,00
+                                    </label>
+                                    <input type="number" min="0" max="10" value="0" class="quantidade">
+                                </div>                             
+                                <div class="produto-pedido">
+                                    <label>
+                                        <input type="checkbox" name="produto" value="Croissant" data-preco="55.00">
+                                        Croissant - R$ 55,00
+                                    </label>
+                                    <input type="number" min="0" max="10" value="0" class="quantidade">
+                                </div>                               
+                                <div class="produto-pedido">
+                                    <label>
+                                        <input type="checkbox" name="produto" value="Donuts" data-preco="25.00">
+                                        Donuts - R$ 25,00
+                                    </label>
+                                    <input type="number" min="0" max="10" value="0" class="quantidade">
+                                </div>
+                                <div class="produto-pedido">
+                                    <label>
+                                        <input type="checkbox" name="produto" value="wraps" data-preco="40.00">
+                                        Wraps - R$ 40,00
+                                    </label>
+                                    <input type="number" min="0" max="10" value="0" class="quantidade">
+                                </div>
+                                <div class="produto-pedido">
+                                    <label>
+                                        <input type="checkbox" name="produto" value="quiches" data-preco="45.00">
+                                        Quiches - R$ 45,00
+                                    </label>
+                                    <input type="number" min="0" max="10" value="0" class="quantidade">
+                                </div>
+                                <div class="produto-pedido">
+                                    <label>
+                                        <input type="checkbox" name="produto" value="empada" data-preco="30.00">
+                                        Empada - R$ 30,00
+                                    </label>
+                                    <input type="number" min="0" max="10" value="0" class="quantidade">
+                                </div>
+                                <div class="produto-pedido">
+                                    <label>
+                                        <input type="checkbox" name="produto" value="tapioca" data-preco="50.00">
+                                        Tapioca - R$ 50,00
+                                    </label>
+                                    <input type="number" min="0" max="10" value="0" class="quantidade">
+                                </div>
+                                <div class="produto-pedido">
+                                    <label>
+                                        <input type="checkbox" name="produto" value="iorgute" data-preco="40.00">
+                                        Iorgute com granolas - R$ 40,00
+                                    </label>
+                                    <input type="number" min="0" max="10" value="0" class="quantidade">
+                                </div>
+                                <div class="produto-pedido">
+                                    <label>
+                                        <input type="checkbox" name="produto" value="sanduiche" data-preco="30.00">
+                                        Sanduíches naturais - R$ 30,00
+                                    </label>
+                                    <input type="number" min="0" max="10" value="0" class="quantidade">
+                                </div>
+                                <div class="produto-pedido">
+                                    <label>
+                                        <input type="checkbox" name="produto" value="geleias" data-preco="25.00">
+                                        Geleias artesanais - R$ 25,00
+                                    </label>
+                                    <input type="number" min="0" max="10" value="0" class="quantidade">
+                                </div>
+                                <div class="produto-pedido">
+                                    <label>
+                                        <input type="checkbox" name="produto" value="mel" data-preco="55.00">
+                                        Mel - R$ 55,00
+                                    </label>
+                                    <input type="number" min="0" max="10" value="0" class="quantidade">
+                                </div>
+                                <div class="produto-pedido">
+                                    <label>
+                                        <input type="checkbox" name="produto" value="chocolate" data-preco="70.00">
+                                        Chocolate artesanal - R$ 70,00
+                                    </label>
+                                    <input type="number" min="0" max="10" value="0" class="quantidade">
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <!-- OBSERVAÇÕES -->
+                        <fieldset>
+                            <legend>Observações</legend>
+                            <div class="form-group">
+                                <label for="observacoes">Alguma observação especial?</label>
+                                <textarea id="observacoes" name="observacoes" rows="4" placeholder="Ex: Sem açúcar, extra quente, etc..."></textarea>
+                            </div>
+                        </fieldset>
+
+                        <!-- MÉTODO DE PAGAMENTO -->
+                        <fieldset>
+                            <legend>Método de Pagamento</legend>
+                            <div class="form-group">
+                                <label>
+                                    <input type="radio" name="pagamento" value="dinheiro" checked>
+                                    💵 Dinheiro
+                                </label>
+                                <label>
+                                    <input type="radio" name="pagamento" value="cartao">
+                                    💳 Cartão de Crédito/Débito
+                                </label>
+                                <label>
+                                    <input type="radio" name="pagamento" value="pix">
+                                    🔑 PIX
+                                </label>
+                            </div>
+                        </fieldset>
+
+                        <button type="submit" class="btn btn-primary btn-large">Confirmar Pedido</button>
+                    </form>
+                </div>
+
+                <!-- RESUMO DO PEDIDO -->
+                <div class="resumo-container">
+                    <div class="resumo-pedido">
+                        <h2>Resumo do Pedido</h2>
+                        <div id="resumo-itens">
+                            <p class="vazio">Nenhum produto selecionado</p>
+                        </div>
+                        <div class="resumo-totais">
+                            <div class="total-linha">
+                                <span>Subtotal:</span>
+                                <span id="subtotal">R$ 0,00</span>
+                            </div>
+                            <div class="total-linha" id="entrega-linha" style="display: none;">
+                                <span>Entrega:</span>
+                                <span id="taxa-entrega">R$ 5,00</span>
+                            </div>
+                            <div class="total-linha total-final">
+                                <span>Total:</span>
+                                <span id="total">R$ 0,00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Gelato & Grão. Todos os direitos reservados.</p>
+            <div class="social-links">
+                <a href="#">Instagram</a>
+                <a href="#">WhatsApp</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/Cafeteria-WEB/js/script.js"></script>
+</body>
+</html>
